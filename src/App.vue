@@ -1,7 +1,5 @@
 <template>
-  <div class="text-4xl">Hello ITSC</div>
-
-  <RouterView />
+  <div class="text-4xl">Welcome ITSC!</div>
 </template>
 
 <style scoped>
