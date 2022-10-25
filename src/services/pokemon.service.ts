@@ -12,6 +12,7 @@ export const getPokemonByName = (name: string): Promise<PokemonDetailData> =>
       img: data.sprites.front_default,
       name: data.name,
       abilities: data.abilities.map((ability) => ability.ability.name),
+      types: data.types.map((typeData) => typeData.type.name),
     }));
 
 export const getPokemons = async (): Promise<PokemonData[]> => {

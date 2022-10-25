@@ -10,6 +10,13 @@ export interface PokeApiData {
   sprites: { front_default: string };
   name: string;
   results: { url: string }[];
+  types: {
+    slot: number;
+    type: {
+      name: string;
+      url: string;
+    };
+  }[];
 }
 
 export interface PokemonData {
@@ -19,4 +26,5 @@ export interface PokemonData {
 
 export interface PokemonDetailData extends PokemonData {
   abilities: string[];
+  types: string[];
 }
