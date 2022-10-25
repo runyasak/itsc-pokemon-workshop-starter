@@ -2,9 +2,11 @@
 import type { PokemonDetailData } from "@/models/pokemon.model";
 import { getPokemonByName } from "@/services/pokemon.service";
 import { onMounted, ref } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 
 const { params } = useRoute();
+
+const router = useRouter();
 
 const pokemon = ref<PokemonDetailData>();
 
@@ -15,6 +17,10 @@ onMounted(async () => {
 
 <template>
   <div class="container mw-[1024px] mx-auto flex flex-col items-center gap-8">
+    <span class="link self-start cursor-pointer" @click="router.back()">
+      Back
+    </span>
+
     <div class="card shadow-xl">
       <figure>
         <img
