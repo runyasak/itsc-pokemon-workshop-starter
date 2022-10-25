@@ -1,12 +1,17 @@
-import type { PokeApiData, PokemonData } from "@/models/pokemon.model";
+import type {
+  PokeApiData,
+  PokemonData,
+  PokemonDetailData,
+} from "@/models/pokemon.model";
 import axios from "axios";
 
-export const getPokemonByName = (name: string): Promise<PokemonData> =>
+export const getPokemonByName = (name: string): Promise<PokemonDetailData> =>
   axios
     .get<PokeApiData>(`https://pokeapi.co/api/v2/pokemon/${name}`)
     .then(({ data }) => ({
       img: data.sprites.front_default,
       name: data.name,
+      abilities: data.abilities.map((ability) => ability.ability.name),
     }));
 
 export const getPokemons = async (): Promise<PokemonData[]> => {

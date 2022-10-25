@@ -1,4 +1,12 @@
 export interface PokeApiData {
+  abilities: {
+    ability: {
+      name: string;
+      url: string;
+    };
+    is_hidden: boolean;
+    slot: number;
+  }[];
   sprites: { front_default: string };
   name: string;
   results: { url: string }[];
@@ -7,4 +15,8 @@ export interface PokeApiData {
 export interface PokemonData {
   name: string;
   img: string;
+}
+
+export interface PokemonDetailData extends PokemonData {
+  abilities: string[];
 }
