@@ -1,6 +1,6 @@
 # itsc-pokemon-workshop
 
-This template should help get you started developing with Vue 3 in Vite.
+<p align="center"><img src="https://github.com/runyasak/itsc-pokemon-workshop-starter/blob/main/docs/screenshot.png" /></p>
 
 ## Recommended IDE Setup
 
